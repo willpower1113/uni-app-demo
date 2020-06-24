@@ -52,7 +52,7 @@
 				{{titles[4]}}
 			</text>
 			<view class="uni-container-check-box">
-						<button type="primary"  class="uni-content-button" @click="onSetContent" data-value="flex-start">flex-start</button>
+						<button type="primary"  class="uni-content-button" @tap="onSetContent" data-value="flex-start">flex-start</button>
 						<button type="primary"   class="uni-content-button">flex-end</button>
 						<button type="primary" class="uni-content-button">center </button>
 						<button type="primary"   class="uni-content-button">space-between</button>
@@ -77,7 +77,10 @@
 			}
 		},
 		methods: {
-			
+			onSetContent(e){
+				console.log(e.currentTarget.dataset.value)
+				
+			}
 		}
 	}
 </script>
